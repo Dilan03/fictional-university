@@ -5961,7 +5961,7 @@ const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__["default
 const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_3__["default"]();
 const mynotes = new _modules_MyNotes__WEBPACK_IMPORTED_MODULE_4__["default"]();
 const like = new _modules_Like__WEBPACK_IMPORTED_MODULE_5__["default"]();
-console.log('testttt2');
+console.log('testttt22');
 
 /***/ }),
 
