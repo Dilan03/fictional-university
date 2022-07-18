@@ -1,6 +1,6 @@
 import "./index.scss"
 import {TextControl, Flex, FlexBlock, FlexItem, Button, Icon, PanelBody, PanelRow, ColorPicker} from "@wordpress/components"
-import {InspectorControls, BlockControls, AlignmentToolbar} from "@wordpress/block-editor"
+import {InspectorControls, BlockControls, AlignmentToolbar, useBlockProps} from "@wordpress/block-editor"
 
 (function() {
   let locked = false
@@ -49,6 +49,10 @@ wp.blocks.registerBlockType("ourplugin/custom-block", {
 })
 
 function EditComponent(props) {
+  const blockProps = useBlockProps({
+    className:"paying_attention-edit-block",
+    style: {backgroundColor: props.attributes.bgColor}
+  })
 
   function updateQuestion(value) {
     props.setAttributes({question: value})
@@ -70,7 +74,7 @@ function EditComponent(props) {
   }
 
   return (
-    <div className="paying_attention-edit-block" style={{backgroundColor: props.attributes.bgColor}}>
+    <div {...blockProps} >
 
       <BlockControls>
         <AlignmentToolbar value={props.attributes.theAlignment} onChange={x => props.setAttributes({theAlignment: x})}/>
