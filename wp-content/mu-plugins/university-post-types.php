@@ -38,7 +38,7 @@ function university_post_tpes(){
   // Professor Post Type
   register_post_type('professor', array(
     
-    'supports' => array('title', 'thumbnail'),
+    'supports' => array('title', 'editor' ,'thumbnail'),
     'public' => true,
     'menu_icon' => 'dashicons-welcome-learn-more',
     'show_in_rest' => true,
